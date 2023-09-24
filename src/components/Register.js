@@ -12,24 +12,28 @@ import axios from "axios";
 const Register = () => {
 
 
-    axios.post('http://localhost:5000/auth/registration', {
+    function SendRequest()  {
+        axios.post('http://localhost:5000/auth/registration', {
 
-        username: "string",
-        password: "string"
+            username: "string",
+            password: "string"
 
-    })
-        .then(function (response) {
-            console.log(response);
         })
-        .catch(function (error) {
-            console.log(error);
-        });
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+
+    }
+
 
     const [values, setValues] = useState({
         username:'',
         password:''
     })
-
 
     const  [errors,setErrors] = useState({})
     function handleInput(event) {
@@ -78,7 +82,7 @@ const Register = () => {
                     </div>
 
                     <div className="container-login100-form-btn">
-                        <button className="login100-form-btn">
+                        <button className="login100-form-btn" onClick={SendRequest}>
                             Sign in
                         </button>
                     </div>

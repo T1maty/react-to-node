@@ -3,7 +3,10 @@ import "../components/utils.css"
 import  "../components/reset.css"
 import Validation from "../components/Validation/Validation"
 import {useState} from "react";
+import axios from "axios";
 
+
+//axios post to Node Server
 
 
 const Register = () => {

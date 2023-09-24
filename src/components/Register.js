@@ -2,7 +2,7 @@ import "../components/main.css"
 import "../components/utils.css"
 import  "../components/reset.css"
 import Validation from "../components/Validation/Validation"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 
@@ -10,6 +10,20 @@ import axios from "axios";
 
 
 const Register = () => {
+
+
+    axios.post('http://localhost:5000/auth/registration', {
+
+        username: "string",
+        password: "string"
+
+    })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 
     const [values, setValues] = useState({
         username:'',
@@ -23,11 +37,11 @@ const Register = () => {
         setValues(newObject)
     }
 
-function handleValidation(event) {
+
+    function handleValidation(event) {
         event.preventDefault();
         setErrors(Validation(values));
-}
-
+    }
 
 
 
@@ -41,13 +55,13 @@ function handleValidation(event) {
                 </span>
 
                     <div className="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-                        <input className="input100" type="text" name="username" placeholder="Username" onChange={handleInput}/>
+                        <input className="input100" type="text" name="username" placeholder="Username" onBlur={handleInput}/>
                             <span className="focus-input100"></span>
                         {errors.username && <p style={{color:"red"}}>{errors.username}</p>}
                     </div>
 
                     <div className="wrap-input100 validate-input" data-validate="Please enter password">
-                        <input className="input100" type="password" name="pass" placeholder="Password" onChange={handleInput}/>
+                        <input className="input100" type="password" name="pass" placeholder="Password" onBlur={handleInput}/>
                             <span className="focus-input100"></span>
                         {errors.password && <p style={{color:"red"}}>{errors.password}</p>}
 

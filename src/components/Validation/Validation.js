@@ -11,8 +11,10 @@ export default function Validation (values) {
 
 
 
-    if(values.username === ""){
-        errors.username = "UserName is Required";
+    if (values.username === ""){
+        errors.username = 'User Name  is  Required';
+    }else if (!username_pattern.test(values.username)) {
+        errors.username = "User Name did'nt match"
     }
     
 

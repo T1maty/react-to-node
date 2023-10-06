@@ -1,6 +1,6 @@
-import "../components/main.css"
-import "../components/utils.css"
-import  "../components/reset.css"
+import "./css/style.css"
+import "./css/utils.css"
+import  "./css/reset.css"
 import Validation from "../components/Validation/Validation"
 import {useEffect, useState} from "react";
 import axios from "axios";

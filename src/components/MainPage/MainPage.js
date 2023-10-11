@@ -13,7 +13,7 @@ const MainPage = () => {
                     <li><a href="/Travel">Travel</a></li>
                     <li><a href="#">New's</a></li>
                     <li><a href="#">Contacts</a></li>
-                    <li><a href="/Registration">Log In</a></li>
+                    <li><a href="/registration">Log In</a></li>
 
                 </ul>
             </div>

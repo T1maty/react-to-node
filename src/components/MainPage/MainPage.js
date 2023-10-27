@@ -10,7 +10,7 @@ const MainPage = () => {
             <div className="navbar">
                 <a href="#" className="logo">Girris</a>
                 <ul>
-                    <li><a href="/Travel">Travel</a></li>
+                    <li><a href="/xbox">Xbox</a></li>
                     <li><a href="#">New's</a></li>
                     <li><a href="#">Contacts</a></li>
                     <li><a href="/registration">Log In</a></li>
